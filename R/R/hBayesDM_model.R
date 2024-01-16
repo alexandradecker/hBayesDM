@@ -141,7 +141,8 @@ hBayesDM_model <- function(task_name,
       stop("** Posterior predictions are not yet available for this model. **\n")
     }
 
-    if (is.null(data) || is.na(data) || data == "") {
+    # if (is.null(data) || is.na(data) || data == "") {
+    if (is.null(data)) {
       stop("Invalid input for the 'data' value. ",
            "You should pass a data.frame, or a filepath for a data file,",
            "\"example\" for an example dataset, ",
